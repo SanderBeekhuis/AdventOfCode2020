@@ -1,4 +1,5 @@
 import functools
+import itertools
 
 def run(file: str='input.txt'):
   lines = open(file, 'r').readlines()
