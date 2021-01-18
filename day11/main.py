@@ -23,7 +23,7 @@ def run(file: str='day11/input.txt'):
             new_lines[i][j] = '#'
             changes = True
         elif lines[i][j] == '#':
-          if seated_neighbours(lines, i, j) >= 4:
+          if seated_neighbours(lines, i, j) >= 5:
             new_lines[i][j] = 'L'
             changes=True
         else:
@@ -37,13 +37,24 @@ def run(file: str='day11/input.txt'):
   return seated_count(lines)
 
 def seated_neighbours(lines, i, j):
+  def check_seat(i, j):
+    if  i >= 0 and j >= 0:
+      try:
+        return lines[i][j]
+      except IndexError:
+        return 'L' # If we are out of bounds we just don't increase the count of seated neighbours
+
+    return 'L'
+
   acc = 0
   for di,dj in {(1,1), (1,0), (1, -1), (0,1), (0,-1), (-1, 1), (-1, 0), (-1, -1)}:
-    try:
-      if lines[i + di][j + dj] == '#' and i + di >= 0 and j + dj >= 0:
-        acc += 1
-    except IndexError:
-      pass # If we are out of bounds we just don't increase the count of seated neighbours
+    x = 1
+    while check_seat(i + x * di, j+ x * dj) == '.':
+      x += 1
+
+    if check_seat(i + x * di, j + x * dj) == '#':
+      acc += 1
+        
   return acc
 
 def seated_count(lines):
