@@ -5,8 +5,10 @@ name = "pypi"
 
 [packages]
 pytest = "*"
+sympy = "*"
 
 [dev-packages]
+ipython = "*"
 
 [requires]
 python_version = "3.9"
