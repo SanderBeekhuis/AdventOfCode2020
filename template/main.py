@@ -1,7 +1,6 @@
 def run(file: str = 'input.txt'):
     lines = open(file, 'r').readlines()
-    lines = map(lambda l: l.strip(), lines)
-    lines = list(lines)
+    lines = [line.strip() for line in lines]
 
 
 if __name__ == "__main__":
