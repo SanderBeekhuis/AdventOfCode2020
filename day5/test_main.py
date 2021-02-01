@@ -1,6 +1,6 @@
 import pytest
 
-import main
+import day5.main as main
 
 def test_row():
     assert main.row('FBFBBFF') == 44

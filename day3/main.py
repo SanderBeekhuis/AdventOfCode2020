@@ -1,4 +1,4 @@
-lines = open('input.txt', 'r').readlines()
+lines = open('day3/input.txt', 'r').readlines()
 
 trees=0
 

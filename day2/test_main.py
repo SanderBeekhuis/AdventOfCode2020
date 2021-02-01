@@ -1,4 +1,4 @@
-import main
+import day2.main as main
 import pytest
 
 @pytest.mark.parametrize(

@@ -13,7 +13,7 @@ def is_valid(line):
 
   return c[letter] == 1
 
-lines = open('input.txt', 'r').readlines()
+lines = open('day2/input.txt', 'r').readlines()
 valid_password_count = 0
 
 for line in lines:
