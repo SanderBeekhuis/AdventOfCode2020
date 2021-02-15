@@ -31,6 +31,7 @@ def test_update_generation(cg):
     assert cg.active_count() == 112
 
 
+@pytest.mark.skip("slow")
 def test_update_generation_4d(cg4d):
     for _ in range(6):
         cg4d.update_generation()
