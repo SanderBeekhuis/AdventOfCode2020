@@ -32,7 +32,6 @@ def run(file: str='day11/input.txt'):
     lines = new_lines
 
     print(seated_count(lines))
-    # pprint(list(map(lambda l: ''.join(l), lines)))
 
   return seated_count(lines)
 
