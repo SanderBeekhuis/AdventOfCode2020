@@ -32,7 +32,7 @@ class RuleSet:
         self._parse_rules()
         self._resolve_rules()
         computed_rule = self.computed_rules[0]
-        return self._rule_to_regex(computed_rule)
+        return f'^{self._rule_to_regex(computed_rule)}$'
 
     def _parse_rules(self):
         for rule in self.rules:
