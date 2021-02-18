@@ -4,12 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pytest = "*"
 sympy = "*"
 more-itertools = "*"
 
 [dev-packages]
 ipython = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.9"
