@@ -40,8 +40,8 @@ def test_reference_rule_parsing(rule_set):
 
 
 def test_compute_rule_0(rule_set):
-    assert rule_set.compute_rule_zero_regex() == '((ab)|(bb))'
+    assert rule_set.compute_rule_zero_regex() == '^((ab)|(bb))$'
 
 
 def test_two_step_compute_rule_0(two_step_rule_set):
-    assert two_step_rule_set.compute_rule_zero_regex() == '((((ab))b)|(((ab)|(bb))a))'
+    assert two_step_rule_set.compute_rule_zero_regex() == '^((((ab))b)|(((ab)|(bb))a))$'
